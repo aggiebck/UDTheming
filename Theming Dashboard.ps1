@@ -1,4 +1,4 @@
-﻿$Theme = @{
+$Theme = @{
     typography = @{
       fontSize = 16
       fontFamily = "'Work Sans', sans-serif"
@@ -74,9 +74,9 @@ $Pages += New-UDPage -Name "Project-Gantt" -Content{
             color: black;
             -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
-            background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("./logo/US_Army_Cyber_Command_SSI.png"), -webkit-linear-gradient(-180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
-            background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("./logo/US_Army_Cyber_Command_SSI.png"), -moz-linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
-            background: linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("./logo/US_Army_Cyber_Command_SSI.png"), linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("/logo/US_Army_Cyber_Command_SSI.png"), -webkit-linear-gradient(-180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
+            background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("/logo/US_Army_Cyber_Command_SSI.png"), -moz-linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("/logo/US_Army_Cyber_Command_SSI.png"), linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
             background-repeat: repeat, no-repeat, repeat;
             background-position: 50% 50%;
             -webkit-background-origin: padding-box;
@@ -98,7 +98,7 @@ $Pages += New-UDPage -Name "Project-Gantt" -Content{
     $Drawer = New-UDDrawer -Children {
         New-UDList -Children {
             New-UDListItem -Label "Gantt-Chart" -OnClick {Invoke-UDRedirect http://localhost:5000/Theme/Project-Gantt}
-            New-UDListItem -Label "OPS Dashboard" -OnClick {Invoke-UDRedirect http://localhost:5000/Dev_Dashboard/OPS-Dashboard}
+            New-UDListItem -Label "OPS Dashboard" -OnClick {Invoke-UDRedirect http://localhost:5000/Theme/OPS-Dashboard}
         }
     }
     New-UDAppBar -Position fixed -Children {
@@ -298,7 +298,8 @@ $Pages += New-UDPage -Name 'OPS Dashboard' -Content{
             font-size: 22px;
             border-radius: 25px;
             text-align: center;
-            background-color: rgba(49,49,49,0.7);
+            color: white;
+            background-color: rgba(55,55,55,0.8);
         }
         #enjoy-css {
             -webkit-box-sizing: border-box;
@@ -313,9 +314,9 @@ $Pages += New-UDPage -Name 'OPS Dashboard' -Content{
             color: black;
             -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
-            background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("https://enjoycss.com/bg-img/custom/8795-1bvlibh.ax9h.png"), -webkit-linear-gradient(-180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
-            background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("https://enjoycss.com/bg-img/custom/8795-1bvlibh.ax9h.png"), -moz-linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
-            background: linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("https://enjoycss.com/bg-img/custom/8795-1bvlibh.ax9h.png"), linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("/logo/US_Army_Cyber_Command_SSI.png"), -webkit-linear-gradient(-180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
+            background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("/logo/US_Army_Cyber_Command_SSI.png"), -moz-linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("/logo/US_Army_Cyber_Command_SSI.png"), linear-gradient(270deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%);
             background-repeat: repeat, no-repeat, repeat;
             background-position: 50% 50%;
             -webkit-background-origin: padding-box;
@@ -349,7 +350,7 @@ $Pages += New-UDPage -Name 'OPS Dashboard' -Content{
                 }
             }
             New-UDGrid -Item -ExtraSmallSize 11 -Content{
-                New-UDElement -Id "logoText" -Tag 'h1' -Content {"Army Cyber Command - Operations"} 
+                New-UDElement -Id "logoText" -Tag 'h1' -Content {"Operations"} 
             }
         }   
     } -Drawer $Drawer
@@ -386,7 +387,7 @@ $Pages += New-UDPage -Name 'OPS Dashboard' -Content{
                 New-UDGrid -Item -ExtraSmallSize 4 -Content{
                     New-UDPaper -Id "MuiPaper-root" -Content {
                         New-UDCard -Id "cardStyleMain" -Title 'OPS Dashboard Explained' -Content {
-                            "OPS Dashboard Discussion will go here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, sem in imperdiet aliquam, sem augue imperdiet dui, id gravida metus lectus non dolor. Etiam diam leo, accumsan eu tristique ac, eleifend ac nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque tristique, metus. "
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, sem in imperdiet aliquam, sem augue imperdiet dui, id gravida metus lectus non dolor. Etiam diam leo, accumsan eu tristique ac, eleifend ac nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque tristique, metus. "
                         }
                     } -Elevation 2
                 }
@@ -400,7 +401,7 @@ $Pages += New-UDPage -Name 'OPS Dashboard' -Content{
                 New-UDGrid -Item -ExtraSmallSize 12 -Content{
                     New-UDPaper -Id "MuiPaper-root" -Content {
                             New-UDCard -Id "cardStyleMain" -Title 'Operational Toolsets' -Content {
-                                "Showcase Ops Tools here with Discussion. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, sem in imperdiet aliquam, sem augue imperdiet dui, id gravida metus lectus non dolor. Etiam diam leo, accumsan eu tristique ac, eleifend ac nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque tristique, metus. "
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet, sem in imperdiet aliquam, sem augue imperdiet dui, id gravida metus lectus non dolor. Etiam diam leo, accumsan eu tristique ac, eleifend ac nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque tristique, metus. "
                             }
 
                     } -Elevation 2
