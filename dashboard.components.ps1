@@ -1,0 +1,8 @@
+﻿New-PSUDashboardComponent -Name "UniversalDashboard.Charts" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.Charts\1.1.0" -Version "1.1.0" 
+New-PSUDashboardComponent -Name "UniversalDashboard.Map" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.Map\1.0" -Version "1.0" 
+New-PSUDashboardComponent -Name "UniversalDashboard.Charts" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.Charts\1.2.0" -Version "1.2.0" 
+New-PSUDashboardComponent -Name "UniversalDashboard.CodeEditor" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.CodeEditor\1.0.3" -Version "1.0.3" 
+New-PSUDashboardComponent -Name "UniversalDashboard.Style" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.Style\1.0.0" -Version "1.0.0" 
+New-PSUDashboardComponent -Name "UniversalDashboard.UDSimpleIcon" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.UDSimpleIcon\1.0.0" -Version "1.0.0" 
+New-PSUDashboardComponent -Name "UniversalDashboard.UDGantt" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.UDGantt\1.0.0" -Version "1.0.0" 
+New-PSUDashboardComponent -Name "UniversalDashboard.CodeEditor" -Path "C:\ProgramData\PowerShellUniversal\Dashboard\Components\UniversalDashboard.CodeEditor\1.0.4" -Version "1.0.4"
